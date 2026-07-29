@@ -3,25 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B72WGWBFW3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B72WGWBFW3');
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3943439742554258');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3943439742554258&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <title>Mac Store® — Lunettes de marque · Dakar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.44.0/dist/tabler-icons.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" crossorigin="anonymous"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{overflow-x:hidden;width:100%;}
 :root{
-  --g:#C9A84C;--gl:#E2C97E;
-  --bk:#0A0A0A;--bk2:#111;--bk3:#181818;--bk4:#222;
-  --wh:#fff;--wm:#C8BC9E;--ws:#87806A;
-  --bd:1px solid rgba(201,168,76,0.28);
-  --bdh:1px solid rgba(201,168,76,0.7);
+  --g:#B8923D;--gl:#C9A84C;
+  --bk:#FBFAF6;--bk2:#F4EFE2;--bk3:#FFFFFF;--bk4:#F1ECDD;
+  --wh:#1C1712;--wm:#6B6250;--ws:#9A927A;
+  --bd:1px solid rgba(184,146,61,0.35);
+  --bdh:1px solid rgba(201,168,76,0.55);
 }
 body{background:var(--bk);color:var(--wh);font-family:'Raleway',sans-serif;min-height:100vh;}
 a{text-decoration:none;}
-.banner{background:var(--g);color:var(--bk);text-align:center;padding:10px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;}
-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 40px;border-bottom:var(--bd);background:rgba(10,10,10,0.97);position:sticky;top:0;z-index:300;}
+.banner{background:var(--g);color:var(--wh);text-align:center;padding:10px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 40px;border-bottom:var(--bd);background:rgba(251,250,246,0.97);position:sticky;top:0;z-index:300;}
 .logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase;cursor:pointer;user-select:none;}
 .logo span{color:var(--wh);}
 .ntabs{display:flex;gap:4px;}
@@ -30,11 +56,11 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .ntab:hover{color:var(--g);}
 .ntab.on{color:var(--g);border-bottom-color:var(--g);}
 .cbtn{display:flex;align-items:center;gap:8px;background:transparent;border:var(--bd);color:var(--g);padding:8px 18px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
-.cbtn:hover{background:var(--g);color:var(--bk);}
-.cc{background:var(--g);color:var(--bk);border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:transform .3s;}
+.cbtn:hover{background:var(--g);color:var(--wh);}
+.cc{background:var(--g);color:var(--wh);border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:transform .3s;}
 .cc.bump{transform:scale(1.4);}
 .pg{display:none;}.pg.on{display:block;}
-.hero{position:relative;min-height:480px;display:flex;align-items:center;justify-content:center;text-align:center;padding:64px 32px;overflow:hidden;}
+.hero{position:relative;min-height:480px;display:flex;align-items:center;justify-content:center;text-align:center;padding:64px 32px;overflow:hidden;color:#fff;}
 .hero-bg{position:absolute;inset:0;background:var(--bk2);}
 .hero-bg video{width:100%;height:100%;object-fit:cover;object-position:center 20%;opacity:.4;}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.88) 100%);}
@@ -42,22 +68,25 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .htag{font-size:10px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--g);margin-bottom:18px;}
 .hero h1{font-family:'Playfair Display',serif;font-size:54px;font-weight:700;line-height:1.1;margin-bottom:16px;}
 .hero h1 em{font-style:italic;color:var(--gl);}
-.hsub{font-size:14px;font-weight:300;color:var(--wm);max-width:440px;margin:0 auto 32px;line-height:1.85;}
+.hsub{font-size:14px;font-weight:300;color:rgba(255,255,255,.85);max-width:440px;margin:0 auto 32px;line-height:1.85;}
 .hbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-g{background:var(--g);color:var(--bk);border:none;padding:14px 34px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn-g{background:var(--g);color:var(--wh);border:none;padding:14px 34px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
 .btn-g:hover{background:var(--gl);}
-.btn-o{background:transparent;color:var(--wh);border:1px solid rgba(255,255,255,.25);padding:14px 34px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn-o{background:transparent;color:var(--wh);border:1px solid rgba(28,23,18,.25);padding:14px 34px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
 .btn-o:hover{border-color:var(--g);color:var(--g);}
+.hero .btn-o{color:#fff;border-color:rgba(255,255,255,.4);}
+.hero .btn-o:hover{border-color:var(--gl);color:var(--gl);}
 .stats{display:flex;justify-content:center;border-top:var(--bd);border-bottom:var(--bd);}
 .stat{flex:1;text-align:center;padding:22px 16px;border-right:var(--bd);}
 .stat:last-child{border-right:none;}
 .sn{font-family:'Playfair Display',serif;font-size:26px;color:var(--g);font-weight:700;}
 .sl{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ws);margin-top:4px;}
 .avantages{padding:56px 40px;background:var(--bk2);border-top:var(--bd);border-bottom:var(--bd);}
+.home-shop{padding:48px 0 12px;}
 .sec-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--g);margin-bottom:10px;text-align:center;}
 .sec-title{font-family:'Playfair Display',serif;font-size:30px;color:var(--wh);text-align:center;margin-bottom:36px;}
 .av-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
-.av-item{text-align:center;padding:28px 18px;border:var(--bd);background:rgba(201,168,76,.04);}
+.av-item{text-align:center;padding:28px 18px;border:var(--bd);background:rgba(28,23,18,.025);}
 .av-item i{font-size:30px;color:var(--g);display:block;margin-bottom:14px;}
 .av-name{font-family:'Playfair Display',serif;font-size:15px;color:var(--wh);margin-bottom:8px;}
 .av-desc{font-size:12px;color:var(--wm);line-height:1.65;}
@@ -65,42 +94,42 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .sh-title{font-family:'Playfair Display',serif;font-size:28px;color:var(--wh);}
 .fltrs{display:flex;gap:8px;flex-wrap:wrap;}
 .fb{background:transparent;border:var(--bd);color:var(--wm);padding:6px 16px;font-family:'Raleway',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
-.fb:hover,.fb.on{background:var(--g);color:var(--bk);border-color:var(--g);}
+.fb:hover,.fb.on{background:var(--g);color:var(--wh);border-color:var(--g);}
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 40px 48px;}
 .pc{background:var(--bk3);border:var(--bd);cursor:pointer;transition:all .25s;position:relative;overflow:hidden;}
-.pc:hover{border-color:rgba(201,168,76,.7);transform:translateY(-4px);}
+.pc:hover{border-color:var(--g);transform:translateY(-4px);}
 .pc-img{width:100%;height:190px;background:var(--bk4);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .pc-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
 .pc-img img{max-width:100%;max-height:182px;width:auto;height:auto;object-fit:contain;display:block;transition:transform .35s;}
 .pc:hover .pc-img img{transform:scale(1.04);}
-.pbadge{position:absolute;top:10px;left:10px;background:var(--g);color:var(--bk);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;z-index:2;}
+.pbadge{position:absolute;top:10px;left:10px;background:var(--g);color:var(--wh);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;z-index:2;}
 .pb{padding:14px 14px 16px;}
 .pt{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--g);margin-bottom:5px;}
 .pn{font-family:'Playfair Display',serif;font-size:13px;color:var(--wh);margin-bottom:8px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em;}
 .pp{font-size:15px;font-weight:700;color:var(--wh);margin-bottom:12px;}
-.padd{width:100%;background:transparent;border:1px solid rgba(201,168,76,.35);color:var(--g);padding:8px;font-family:'Raleway',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
-.padd:hover{background:var(--g);color:var(--bk);border-color:var(--g);}
-.padd.done{background:rgba(201,168,76,.12);color:var(--gl);}
+.padd{width:100%;background:transparent;border:1px solid rgba(28,23,18,.3);color:var(--g);padding:8px;font-family:'Raleway',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.padd:hover{background:var(--g);color:var(--wh);border-color:var(--g);}
+.padd.done{background:rgba(184,146,61,.12);color:var(--g);}
 .mover{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:500;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 16px;}
 .mover.open{display:flex;}
 .modal{background:var(--bk3);border:var(--bd);width:100%;max-width:560px;position:relative;margin:auto;}
-.mcls{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.6);border:var(--bd);color:var(--wm);width:32px;height:32px;font-size:16px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.mcls{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.6);border:var(--bd);color:#fff;width:32px;height:32px;font-size:16px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;transition:all .2s;}
 .mcls:hover{color:var(--g);border-color:var(--g);}
 .mbody{padding:24px;}
 .mtype{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--g);margin-bottom:7px;}
 .mname{font-family:'Playfair Display',serif;font-size:21px;color:var(--wh);margin-bottom:5px;line-height:1.25;}
 .mprice{font-size:22px;font-weight:700;color:var(--gl);margin-bottom:3px;}
 .mtotal{font-size:12px;color:var(--ws);margin-bottom:14px;}
-.mdesc{font-size:12px;color:var(--wm);line-height:1.75;margin-bottom:16px;border-left:2px solid rgba(201,168,76,.3);padding-left:12px;}
+.mdesc{font-size:12px;color:var(--wm);line-height:1.75;margin-bottom:16px;border-left:2px solid rgba(184,146,61,.4);padding-left:12px;}
 .mfeats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:16px;}
 .mf{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--wm);}
 .mf i{color:var(--g);font-size:13px;}
 .opts-section{margin-bottom:14px;}
 .olbl{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ws);margin-bottom:7px;display:block;}
-.osel{width:100%;background:rgba(255,255,255,.04);border:var(--bd);color:var(--wh);padding:10px 12px;font-family:'Raleway',sans-serif;font-size:12px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;margin-bottom:10px;}
+.osel{width:100%;background:rgba(28,23,18,.025);border:var(--bd);color:var(--wh);padding:10px 12px;font-family:'Raleway',sans-serif;font-size:12px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;margin-bottom:10px;}
 .osel:focus{border-color:var(--g);}
-.osel option{background:#1a1a1a;color:var(--wh);}
-.osel option[value=""]{color:#87806A;}
+.osel option{background:#fff;color:var(--wh);}
+.osel option[value=""]{color:var(--ws);}
 .osel.invalid{border:1px solid #e05555;}
 .finp.invalid{border-color:#e05555;}
 .opt-warn{display:none;align-items:center;gap:7px;font-size:11px;color:#e05555;background:rgba(224,85,85,.08);border:1px solid rgba(224,85,85,.3);padding:8px 10px;margin-bottom:12px;}
@@ -110,7 +139,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .qlbl{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ws);}
 .qctrl{display:flex;align-items:center;border:var(--bd);}
 .qbtn{background:transparent;border:none;color:var(--g);width:34px;height:34px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.qbtn:hover{background:rgba(201,168,76,.1);}
+.qbtn:hover{background:rgba(28,23,18,.06);}
 .qnum{width:40px;text-align:center;font-size:14px;font-weight:700;color:var(--wh);border-left:var(--bd);border-right:var(--bd);height:34px;line-height:34px;}
 /* ── GALERIE MODALE (piste glissante) ── */
 .m-gallery{position:relative;background:var(--bk4);}
@@ -122,8 +151,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .m-slide img{max-width:100%;max-height:284px;width:auto;height:auto;object-fit:contain;display:block;}
 
 /* Flèches ← → */
-.m-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(10,10,10,.65);border:1px solid rgba(201,168,76,.4);color:var(--g);width:34px;height:34px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;transition:all .2s;}
-.m-arr:hover{background:var(--g);color:var(--bk);border-color:var(--g);}
+.m-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(10,10,10,.65);border:1px solid rgba(255,255,255,.4);color:var(--g);width:34px;height:34px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;transition:all .2s;}
+.m-arr:hover{background:var(--g);color:var(--wh);border-color:var(--g);}
 .m-arr.prev{left:8px;}
 .m-arr.next{right:8px;}
 .m-arr.hidden{opacity:0;pointer-events:none;}
@@ -146,8 +175,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .m-sug-name{font-size:10px;color:var(--wm);padding:6px 6px 2px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.4em;}
 .m-sug-price{font-size:10.5px;font-weight:700;color:var(--g);padding:0 6px 8px;}
 .madd{flex:1;background:transparent;color:var(--g);border:var(--bd);padding:12px 8px;font-family:'Raleway',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;}
-.madd:hover{background:rgba(201,168,76,.1);border-color:var(--g);}
-.mbuy{flex:1;background:var(--g);color:var(--bk);border:none;padding:12px 8px;font-family:'Raleway',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;}
+.madd:hover{background:rgba(184,146,61,.08);border-color:var(--g);}
+.mbuy{flex:1;background:var(--g);color:var(--wh);border:none;padding:12px 8px;font-family:'Raleway',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;}
 .mbuy:hover{background:var(--gl);}
 @media(max-width:480px){
   .mbtns{flex-direction:column;}
@@ -173,16 +202,16 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .ci-up{font-size:12px;color:var(--g);}
 .ci-qty{display:flex;align-items:center;gap:8px;margin-top:8px;}
 .cqb{background:transparent;border:var(--bd);color:var(--g);width:26px;height:26px;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.cqb:hover{background:rgba(201,168,76,.1);}
+.cqb:hover{background:rgba(28,23,18,.06);}
 .cqn{font-size:13px;font-weight:700;color:var(--wh);min-width:22px;text-align:center;}
 .ci-del{background:transparent;border:none;color:var(--ws);cursor:pointer;font-size:16px;padding:4px;flex-shrink:0;transition:color .2s;}
 .ci-del:hover{color:#e05555;}
 .ci-total{font-size:15px;font-weight:700;color:var(--gl);white-space:nowrap;text-align:right;flex-shrink:0;}
 .csumm{background:var(--bk3);border:var(--bd);padding:22px;margin-top:6px;}
-.srow{display:flex;justify-content:space-between;padding:8px 0;font-size:13px;color:var(--wm);border-bottom:1px solid rgba(201,168,76,.08);}
+.srow{display:flex;justify-content:space-between;padding:8px 0;font-size:13px;color:var(--wm);border-bottom:1px solid rgba(28,23,18,.08);}
 .stot{display:flex;justify-content:space-between;padding:13px 0 0;font-size:17px;font-weight:700;color:var(--wh);}
 .stot span:last-child{color:var(--g);}
-.ckout{width:100%;background:var(--g);color:var(--bk);border:none;padding:15px;font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;margin-top:14px;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px;}
+.ckout{width:100%;background:var(--g);color:var(--wh);border:none;padding:15px;font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;margin-top:14px;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px;}
 .ckout:hover{background:var(--gl);}
 .cntpg{padding:48px 40px;}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px;}
@@ -193,13 +222,13 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 4
 .cval a:hover{color:var(--g);}
 .fi{margin-bottom:14px;}
 .fl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ws);display:block;margin-bottom:6px;}
-.finp{width:100%;background:rgba(255,255,255,.04);border:var(--bd);color:var(--wh);padding:10px 13px;font-family:'Raleway',sans-serif;font-size:13px;outline:none;transition:border-color .2s;}
+.finp{width:100%;background:rgba(28,23,18,.025);border:var(--bd);color:var(--wh);padding:10px 13px;font-family:'Raleway',sans-serif;font-size:13px;outline:none;transition:border-color .2s;}
 .phone-group{display:flex;}
-.phone-prefix{background:rgba(255,255,255,.08);border:var(--bd);border-right:none;color:var(--wm);padding:10px 12px;font-family:'Raleway',sans-serif;font-size:13px;font-weight:600;display:flex;align-items:center;white-space:nowrap;}
+.phone-prefix{background:rgba(28,23,18,.05);border:var(--bd);border-right:none;color:var(--wm);padding:10px 12px;font-family:'Raleway',sans-serif;font-size:13px;font-weight:600;display:flex;align-items:center;white-space:nowrap;}
 .phone-group .finp{flex:1;min-width:0;width:auto;}
 .finp:focus{border-color:var(--g);}
 textarea.finp{resize:vertical;min-height:82px;}
-.fsub{width:100%;background:var(--g);color:var(--bk);border:none;padding:13px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;margin-top:4px;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.fsub{width:100%;background:var(--g);color:var(--wh);border:none;padding:13px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;margin-top:4px;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
 .fsub:hover{background:var(--gl);}
 .toast{position:fixed;bottom:24px;right:24px;background:var(--bk3);border:var(--bdh);color:var(--g);padding:12px 22px;font-size:12px;font-weight:600;letter-spacing:1px;z-index:999;transform:translateY(80px);opacity:0;transition:all .35s;max-width:290px;}
 .toast.show{transform:translateY(0);opacity:1;}
@@ -228,7 +257,7 @@ footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;ju
   .ntab{padding:5px 6px;font-size:8px;letter-spacing:.5px;gap:0;}
   .ntab i{display:none;}
   .cbtn{padding:7px 10px;font-size:9px;letter-spacing:.6px;gap:5px;}
-  .cbtn .ti{display:none;}
+  .cbtn i{display:none;}
 
   /* HERO */
   .hero{min-height:340px;padding:44px 20px;}
@@ -319,16 +348,16 @@ footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;ju
 </style>
 </head>
 <body>
-<div class="banner"><i class="ti ti-truck-delivery" style="margin-right:5px;vertical-align:-2px;"></i>Livraison en moins de 24h d&egrave;s 1 000 FCFA &nbsp;&middot;&nbsp; <i class="ti ti-cash" style="margin-right:5px;vertical-align:-2px;"></i>Paiement &agrave; la r&eacute;ception &nbsp;&middot;&nbsp; <i class="ti ti-phone" style="margin-right:5px;vertical-align:-2px;"></i>+221 77 675 79 31</div>
+<div class="banner"><i class="fas fa-truck-fast" style="margin-right:5px;vertical-align:-2px;"></i>Livraison en moins de 24h d&egrave;s 1 000 FCFA &nbsp;&middot;&nbsp; <i class="fas fa-money-bill-wave" style="margin-right:5px;vertical-align:-2px;"></i>Paiement &agrave; la r&eacute;ception &nbsp;&middot;&nbsp; <i class="fas fa-phone" style="margin-right:5px;vertical-align:-2px;"></i>+221 77 675 79 31</div>
 <nav>
   <div class="logo" onclick="sp('home')">Mac<span>Store</span><sup style="font-size:9px;vertical-align:super;color:var(--gl)">&reg;</sup></div>
   <div class="ntabs">
-    <button class="ntab on" onclick="sp('home',this)"><i class="ti ti-home"></i> Accueil</button>
-    <button class="ntab" onclick="sp('shop',this)"><i class="ti ti-shopping-cart"></i> Boutique</button>
-    <button class="ntab" onclick="sp('cnt',this)"><i class="ti ti-headset"></i> Contact</button>
+    <button class="ntab on" onclick="sp('home',this)"><i class="fas fa-house"></i> Accueil</button>
+    <button class="ntab" onclick="sp('shop',this)"><i class="fas fa-cart-shopping"></i> Boutique</button>
+    <button class="ntab" onclick="sp('cnt',this)"><i class="fas fa-headset"></i> Contact</button>
   </div>
   <button class="cbtn" onclick="sp('cart',null)">
-    <i class="ti ti-shopping-bag"></i> Panier <span class="cc" id="cc">0</span>
+    <i class="fas fa-bag-shopping"></i> Panier <span class="cc" id="cc">0</span>
   </button>
 </nav>
 
@@ -347,24 +376,32 @@ footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;ju
     </div>
   </section>
   <div class="stats">
-    <div class="stat"><i class="ti ti-users" style="color:var(--g);font-size:18px;display:block;margin-bottom:6px;"></i><div class="sn">1000+</div><div class="sl">Clients satisfaits</div></div>
-    <div class="stat"><i class="ti ti-clock" style="color:var(--g);font-size:18px;display:block;margin-bottom:6px;"></i><div class="sn">&lt;24h</div><div class="sl">Livraison</div></div>
-    <div class="stat"><i class="ti ti-sun" style="color:var(--g);font-size:18px;display:block;margin-bottom:6px;"></i><div class="sn">UV400</div><div class="sl">Protection garantie</div></div>
+    <div class="stat"><i class="fas fa-users" style="color:var(--g);font-size:18px;display:block;margin-bottom:6px;"></i><div class="sn">1000+</div><div class="sl">Clients satisfaits</div></div>
+    <div class="stat"><i class="fas fa-clock" style="color:var(--g);font-size:18px;display:block;margin-bottom:6px;"></i><div class="sn">&lt;24h</div><div class="sl">Livraison</div></div>
+    <div class="stat"><i class="fas fa-sun" style="color:var(--g);font-size:18px;display:block;margin-bottom:6px;"></i><div class="sn">UV400</div><div class="sl">Protection garantie</div></div>
   </div>
+  <section class="home-shop">
+    <p class="sec-eyebrow">&#10022; Notre s&eacute;lection &#10022;</p>
+    <h2 class="sec-title">Produits populaires</h2>
+    <div class="pgrid" id="pgridHome"></div>
+    <div style="text-align:center;margin-top:30px;">
+      <button class="btn-o" onclick="sp('shop',null)">Voir toute la boutique</button>
+    </div>
+  </section>
   <section class="avantages">
     <p class="sec-eyebrow">&#10022; Nos avantages &#10022;</p>
     <h2 class="sec-title">Pourquoi nous choisir</h2>
     <div class="av-grid">
-      <div class="av-item"><i class="ti ti-shield-check"></i><div class="av-name">Qualit&eacute; certifi&eacute;e</div><div class="av-desc">Verres UV400 et photochromiques de haute protection.</div></div>
-      <div class="av-item"><i class="ti ti-truck-delivery"></i><div class="av-name">Livraison en 24h</div><div class="av-desc">Recevez votre commande partout au S&eacute;n&eacute;gal en moins de 24h.</div></div>
-      <div class="av-item"><i class="ti ti-cash"></i><div class="av-name">Paiement &agrave; la r&eacute;ception</div><div class="av-desc">Paiement &agrave; la r&eacute;ception &agrave; Dakar, et envoi pour les livraisons hors de Dakar ville.</div></div>
-      <div class="av-item"><i class="ti ti-headset"></i><div class="av-name">Service client 7j/7</div><div class="av-desc">Une &eacute;quipe disponible pour vous conseiller.</div></div>
+      <div class="av-item"><i class="fas fa-shield-halved"></i><div class="av-name">Qualit&eacute; certifi&eacute;e</div><div class="av-desc">Verres UV400 et photochromiques de haute protection.</div></div>
+      <div class="av-item"><i class="fas fa-truck-fast"></i><div class="av-name">Livraison en 24h</div><div class="av-desc">Recevez votre commande partout au S&eacute;n&eacute;gal en moins de 24h.</div></div>
+      <div class="av-item"><i class="fas fa-money-bill-wave"></i><div class="av-name">Paiement &agrave; la r&eacute;ception</div><div class="av-desc">Paiement &agrave; la r&eacute;ception &agrave; Dakar, et envoi pour les livraisons hors de Dakar ville.</div></div>
+      <div class="av-item"><i class="fas fa-headset"></i><div class="av-name">Service client 7j/7</div><div class="av-desc">Une &eacute;quipe disponible pour vous conseiller.</div></div>
     </div>
   </section>
   <footer>
     <div class="flogo">MacStore&reg;</div>
-    <div class="fcopy">&copy; 2026 Mac Store &middot; Dakar, S&eacute;n&eacute;gal</div>
-    <a class="flink" href="https://instagram.com/macstore221" target="_blank"><i class="ti ti-brand-instagram"></i> @macstore221</a>
+    <div class="fcopy">&copy; 2026 Mac Store &middot; Dakar, S&eacute;n&eacute;gal &nbsp;&middot;&nbsp; D&eacute;velopp&eacute; par <a href="https://www.221.digital/" target="_blank" rel="noopener noreferrer" style="color:#3B82F6;">221 Digital</a></div>
+    <a class="flink" href="https://instagram.com/macstore221" target="_blank"><i class="fab fa-instagram"></i> @macstore221</a>
   </footer>
 </div>
 
@@ -379,7 +416,7 @@ footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;ju
     </div>
   </div>
   <div class="pgrid" id="pgrid"></div>
-  <footer><div class="flogo">MacStore&reg;</div><div class="fcopy">&copy; 2026 Mac Store &middot; Dakar</div></footer>
+  <footer><div class="flogo">MacStore&reg;</div><div class="fcopy">&copy; 2026 Mac Store &middot; Dakar &nbsp;&middot;&nbsp; D&eacute;velopp&eacute; par <a href="https://www.221.digital/" target="_blank" rel="noopener noreferrer" style="color:#3B82F6;">221 Digital</a></div></footer>
 </div>
 
 <div class="pg" id="pg-cart">
@@ -393,42 +430,42 @@ footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;ju
       <h2 class="sec-title" style="margin-bottom:0;">Valider votre commande</h2>
       <div class="cgrid">
         <div class="cbox">
-          <span class="clbl"><i class="ti ti-receipt" style="margin-right:6px;"></i>R&eacute;capitulatif</span>
+          <span class="clbl"><i class="fas fa-receipt" style="margin-right:6px;"></i>R&eacute;capitulatif</span>
           <div id="coItems"></div>
           <div id="coSumm" style="margin-top:6px;"></div>
         </div>
         <div class="cbox">
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--wh);margin-bottom:18px;"><i class="ti ti-user" style="color:var(--g);margin-right:8px;font-size:16px;"></i>Vos informations</h3>
-          <div class="fi"><label class="fl"><i class="ti ti-user" style="margin-right:4px;"></i>Nom et pr&eacute;nom *</label><input type="text" class="finp" id="cfn" placeholder="Ex : Amadou Diallo"></div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--wh);margin-bottom:18px;"><i class="fas fa-user" style="color:var(--g);margin-right:8px;font-size:16px;"></i>Vos informations</h3>
+          <div class="fi"><label class="fl"><i class="fas fa-user" style="margin-right:4px;"></i>Nom et pr&eacute;nom *</label><input type="text" class="finp" id="cfn" placeholder="Ex : Amadou Diallo"></div>
           <div class="fi">
-            <label class="fl"><i class="ti ti-phone" style="margin-right:4px;"></i>Num&eacute;ro de t&eacute;l&eacute;phone *</label>
+            <label class="fl"><i class="fas fa-phone" style="margin-right:4px;"></i>Num&eacute;ro de t&eacute;l&eacute;phone *</label>
             <div class="phone-group">
               <span class="phone-prefix">+221</span>
               <input type="tel" class="finp phone-input" id="cfph" placeholder="77 000 00 00" inputmode="numeric" maxlength="9" oninput="this.value=this.value.replace(/\D/g,'').slice(0,9)">
             </div>
           </div>
-          <div class="fi"><label class="fl"><i class="ti ti-map-pin" style="margin-right:4px;"></i>Lieu de livraison *</label><input type="text" class="finp" id="cfadr" placeholder="Ex : Pikine, Dakar"></div>
+          <div class="fi"><label class="fl"><i class="fas fa-location-dot" style="margin-right:4px;"></i>Lieu de livraison *</label><input type="text" class="finp" id="cfadr" placeholder="Ex : Pikine, Dakar"></div>
           <div class="fi">
-            <label class="fl"><i class="ti ti-truck-delivery" style="margin-right:4px;"></i>Zone de livraison *</label>
+            <label class="fl"><i class="fas fa-truck-fast" style="margin-right:4px;"></i>Zone de livraison *</label>
             <select class="finp osel" id="cfzone" onchange="updDeliveryFee()">
               <option value="" selected disabled>-- Choisir --</option>
               <option value="1000">Dakar (ville) — 1 000 FCFA</option>
               <option value="2000">Hors ville / Dakar (hors ville) — 2 000 FCFA</option>
             </select>
           </div>
-          <div class="fi"><label class="fl"><i class="ti ti-message" style="margin-right:4px;"></i>Commentaires (facultatif)</label><textarea class="finp" id="cfnote" placeholder="Une précision à ajouter à votre commande..."></textarea></div>
-          <button class="fsub" id="coSubBtn" onclick="submitOrder()"><i class="ti ti-check"></i> Valider la commande</button>
+          <div class="fi"><label class="fl"><i class="fas fa-message" style="margin-right:4px;"></i>Commentaires (facultatif)</label><textarea class="finp" id="cfnote" placeholder="Une précision à ajouter à votre commande..."></textarea></div>
+          <button class="fsub" id="coSubBtn" onclick="submitOrder()"><i class="fas fa-check"></i> Valider la commande</button>
         </div>
       </div>
     </div>
     <div class="cempty" id="coDone" style="display:none;">
-      <i class="ti ti-circle-check" style="color:var(--g);"></i>
+      <i class="fas fa-circle-check" style="color:var(--g);"></i>
       <h2 class="sec-title" style="margin-bottom:10px;">Commande bien reçue !</h2>
       <p>Merci, votre commande a été transmise. Nous vous contacterons très vite pour confirmer la livraison.</p>
       <button class="btn-g" onclick="sp('shop',null)">Continuer mes achats</button>
     </div>
   </div>
-  <footer><div class="flogo">MacStore&reg;</div><div class="fcopy">&copy; 2026 Mac Store &middot; Dakar</div></footer>
+  <footer><div class="flogo">MacStore&reg;</div><div class="fcopy">&copy; 2026 Mac Store &middot; Dakar &nbsp;&middot;&nbsp; D&eacute;velopp&eacute; par <a href="https://www.221.digital/" target="_blank" rel="noopener noreferrer" style="color:#3B82F6;">221 Digital</a></div></footer>
 </div>
 
 <div class="pg" id="pg-cnt">
@@ -438,38 +475,38 @@ footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;ju
     <div class="cgrid">
       <div class="cbox">
         <span class="clbl">T&eacute;l&eacute;phone / WhatsApp</span>
-        <div class="cval"><a href="tel:+221776757931"><i class="ti ti-phone" style="color:var(--g);margin-right:8px;font-size:15px;"></i>+221 77 675 79 31</a></div>
+        <div class="cval"><a href="tel:+221776757931"><i class="fas fa-phone" style="color:var(--g);margin-right:8px;font-size:15px;"></i>+221 77 675 79 31</a></div>
         <span class="clbl">Email</span>
-        <div class="cval"><a href="mailto:Contact.macstore@protonmail.com" style="font-size:13px;"><i class="ti ti-mail" style="color:var(--g);margin-right:8px;font-size:15px;"></i>Contact.macstore@protonmail.com</a></div>
+        <div class="cval"><a href="mailto:Contact.macstore@protonmail.com" style="font-size:13px;"><i class="fas fa-envelope" style="color:var(--g);margin-right:8px;font-size:15px;"></i>Contact.macstore@protonmail.com</a></div>
         <span class="clbl">Instagram</span>
-        <div class="cval"><a href="https://instagram.com/macstore221" target="_blank"><i class="ti ti-brand-instagram" style="color:var(--g);margin-right:8px;font-size:15px;"></i>@macstore221</a></div>
+        <div class="cval"><a href="https://instagram.com/macstore221" target="_blank"><i class="fab fa-instagram" style="color:var(--g);margin-right:8px;font-size:15px;"></i>@macstore221</a></div>
         <div style="border-top:var(--bd);padding-top:16px;">
           <div style="font-size:12px;color:var(--wm);line-height:2.2;">
-            <i class="ti ti-clock" style="color:var(--g);margin-right:8px;"></i>Disponible 7j/7<br>
-            <i class="ti ti-map-pin" style="color:var(--g);margin-right:8px;"></i>Dakar, S&eacute;n&eacute;gal<br>
-            <i class="ti ti-truck-delivery" style="color:var(--g);margin-right:8px;"></i>Livraison &agrave; Dakar d&egrave;s 1 000 FCFA
+            <i class="fas fa-clock" style="color:var(--g);margin-right:8px;"></i>Disponible 7j/7<br>
+            <i class="fas fa-location-dot" style="color:var(--g);margin-right:8px;"></i>Dakar, S&eacute;n&eacute;gal<br>
+            <i class="fas fa-truck-fast" style="color:var(--g);margin-right:8px;"></i>Livraison &agrave; Dakar d&egrave;s 1 000 FCFA
           </div>
         </div>
       </div>
       <div class="cbox">
-        <h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--wh);margin-bottom:18px;"><i class="ti ti-message" style="color:var(--g);margin-right:8px;font-size:16px;"></i>Envoyer un message</h3>
-        <div class="fi"><label class="fl"><i class="ti ti-user" style="margin-right:4px;"></i>Votre nom</label><input type="text" class="finp" id="fn" placeholder="Ex : Amadou Diallo"></div>
-        <div class="fi"><label class="fl"><i class="ti ti-phone" style="margin-right:4px;"></i>T&eacute;l&eacute;phone / WhatsApp</label><input type="tel" class="finp" id="fph" placeholder="+221 77 000 00 00"></div>
-        <div class="fi"><label class="fl"><i class="ti ti-message" style="margin-right:4px;"></i>Message</label><textarea class="finp" id="fm" placeholder="Je souhaite commander..."></textarea></div>
-        <button class="fsub" onclick="sendC()"><i class="ti ti-brand-whatsapp"></i> Envoyer via WhatsApp</button>
+        <h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--wh);margin-bottom:18px;"><i class="fas fa-message" style="color:var(--g);margin-right:8px;font-size:16px;"></i>Envoyer un message</h3>
+        <div class="fi"><label class="fl"><i class="fas fa-user" style="margin-right:4px;"></i>Votre nom</label><input type="text" class="finp" id="fn" placeholder="Ex : Amadou Diallo"></div>
+        <div class="fi"><label class="fl"><i class="fas fa-phone" style="margin-right:4px;"></i>T&eacute;l&eacute;phone / WhatsApp</label><input type="tel" class="finp" id="fph" placeholder="+221 77 000 00 00"></div>
+        <div class="fi"><label class="fl"><i class="fas fa-message" style="margin-right:4px;"></i>Message</label><textarea class="finp" id="fm" placeholder="Je souhaite commander..."></textarea></div>
+        <button class="fsub" onclick="sendC()"><i class="fab fa-whatsapp"></i> Envoyer via WhatsApp</button>
       </div>
     </div>
   </div>
   <footer>
     <div class="flogo">MacStore&reg;</div>
-    <div class="fcopy">&copy; 2026 Mac Store &middot; Dakar</div>
-    <a class="flink" href="https://instagram.com/macstore221" target="_blank"><i class="ti ti-brand-instagram"></i> @macstore221</a>
+    <div class="fcopy">&copy; 2026 Mac Store &middot; Dakar &nbsp;&middot;&nbsp; D&eacute;velopp&eacute; par <a href="https://www.221.digital/" target="_blank" rel="noopener noreferrer" style="color:#3B82F6;">221 Digital</a></div>
+    <a class="flink" href="https://instagram.com/macstore221" target="_blank"><i class="fab fa-instagram"></i> @macstore221</a>
   </footer>
 </div>
 
 <div class="mover" id="mov" onclick="cmClose(event)">
   <div class="modal" id="modal" role="dialog" aria-modal="true">
-    <button class="mcls" onclick="cmClose(null)" aria-label="Fermer"><i class="ti ti-x"></i></button>
+    <button class="mcls" onclick="cmClose(null)" aria-label="Fermer"><i class="fas fa-xmark"></i></button>
     <div id="mcon"></div>
   </div>
 </div>
@@ -544,17 +581,15 @@ function sp(name,btn){
   if(name==='cart')rCart();
   if(name==='checkout')renderCheckout();
   if(name==='shop')rProds('all');
+  if(name==='home')renderHomeProds();
   window.scrollTo(0,0);
 }
 function fp(cat,btn){
   document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');rProds(cat);
 }
-function rProds(cat){
-  const g=document.getElementById('pgrid');
-  const list=cat==='all'?PRODS:PRODS.filter(p=>p.cat===cat);
-  g.innerHTML=list.map(p=>`
-    <div class="pc" onclick="om(${p.id})">
+function prodCard(p){
+  return `<div class="pc" onclick="om(${p.id})">
       <div class="pc-img">
         <div class="pc-img-inner">
           <img src="${p.imgs[0]}" alt="${p.name}" loading="lazy">
@@ -566,10 +601,23 @@ function rProds(cat){
         <div class="pn">${p.name}</div>
         <div class="pp">${p.price.toLocaleString('fr-FR')} FCFA</div>
         <button class="padd ${inCart(p.id)?'done':''}" onclick="event.stopPropagation();qAdd(${p.id},this)">
-          ${inCart(p.id)?'<i class=\"ti ti-check\"></i> Ajouté':'+ Ajouter au panier'}
+          ${inCart(p.id)?'<i class=\"fas fa-check\"></i> Ajouté':'+ Ajouter au panier'}
         </button>
       </div>
-    </div>`).join('');
+    </div>`;
+}
+function rProds(cat){
+  const g=document.getElementById('pgrid');
+  const list=cat==='all'?PRODS:PRODS.filter(p=>p.cat===cat);
+  g.innerHTML=list.map(prodCard).join('');
+}
+function renderHomeProds(){
+  const g=document.getElementById('pgridHome');
+  if(!g)return;
+  const badged=PRODS.filter(p=>p.badge);
+  const rest=PRODS.filter(p=>!p.badge);
+  const picks=[...badged,...rest].slice(0,4);
+  g.innerHTML=picks.map(prodCard).join('');
 }
 function inCart(id){return cart.some(i=>i.id===id);}
 function calcPrice(p){
@@ -577,13 +625,17 @@ function calcPrice(p){
   p.opts.forEach(o=>{const sel=curOpts[p.id+'_'+o.key];const ch=o.choices.find(c=>c.v===sel);if(ch)px+=ch.p;});
   return Math.max(px,0);
 }
-function om(id){
+function om(id,skipHash){
   curP=PRODS.find(x=>x.id===id);curQ=1;curImgIdx=0;curOpts={};
   curP.opts.forEach(o=>{curOpts[curP.id+'_'+o.key]=o.choices.length===1?o.choices[0].v:'';});
   renderModal();
   document.getElementById('mov').classList.add('open');
   document.getElementById('mov').scrollTop=0;
   document.body.style.overflow='hidden';
+  if(!skipHash){
+    const slug=curP.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+    history.pushState({prod:id},'',location.pathname+location.search+'#produit-'+id+'-'+slug);
+  }
 }
 function renderModal(){
   const p=curP;const px=calcPrice(p);
@@ -592,11 +644,11 @@ function renderModal(){
   const slides=p.imgs.map((s,i)=>`<div class="m-slide"><img src="${s}" alt="${p.name}"${i===0?'':' loading="lazy"'}></div>`).join('');
   document.getElementById('mcon').innerHTML=`
     <div class="m-gallery" id="mgallery">
-      ${hasMulti?`<button class="m-arr prev${curImgIdx===0?' hidden':''}" onclick="navImg(-1)" aria-label="Image précédente"><i class="ti ti-chevron-left"></i></button>`:''}
+      ${hasMulti?`<button class="m-arr prev${curImgIdx===0?' hidden':''}" onclick="navImg(-1)" aria-label="Image précédente"><i class="fas fa-chevron-left"></i></button>`:''}
       <div class="m-track-wrap" id="mTrackWrap">
         <div class="m-track" id="mTrack" style="transform:translateX(-${curImgIdx*100}%)">${slides}</div>
       </div>
-      ${hasMulti?`<button class="m-arr next${curImgIdx===p.imgs.length-1?' hidden':''}" onclick="navImg(1)" aria-label="Image suivante"><i class="ti ti-chevron-right"></i></button>`:''}
+      ${hasMulti?`<button class="m-arr next${curImgIdx===p.imgs.length-1?' hidden':''}" onclick="navImg(1)" aria-label="Image suivante"><i class="fas fa-chevron-right"></i></button>`:''}
       ${thumbs}
     </div>
     <div class="mbody">
@@ -605,23 +657,23 @@ function renderModal(){
       <div class="mprice" id="mpx">${px.toLocaleString('fr-FR')} FCFA</div>
       <div class="mtotal" id="mtot">Total estimé : ${(px*curQ).toLocaleString('fr-FR')} FCFA</div>
       <div class="mdesc">${p.desc}</div>
-      <div class="mfeats">${p.features.map(f=>`<div class="mf"><i class="ti ti-check"></i>${f}</div>`).join('')}</div>
+      <div class="mfeats">${p.features.map(f=>`<div class="mf"><i class="fas fa-check"></i>${f}</div>`).join('')}</div>
       <div class="opts-section">
         ${p.opts.map(o=>{
           if(o.choices.length===1){
-            return `<div class="olbl" style="margin-bottom:12px;"><i class="ti ti-adjustments" style="margin-right:4px;"></i>${o.lbl} : <span style="color:var(--wh);text-transform:none;letter-spacing:0;">${o.choices[0].v}</span></div>`;
+            return `<div class="olbl" style="margin-bottom:12px;"><i class="fas fa-sliders" style="margin-right:4px;"></i>${o.lbl} : <span style="color:var(--wh);text-transform:none;letter-spacing:0;">${o.choices[0].v}</span></div>`;
           }
           const sel=curOpts[p.id+'_'+o.key];
-          return `<label class="olbl"><i class="ti ti-adjustments" style="margin-right:4px;"></i>${o.lbl}</label>
+          return `<label class="olbl"><i class="fas fa-sliders" style="margin-right:4px;"></i>${o.lbl}</label>
           <select class="osel" data-optkey="${o.key}" onchange="chOpt(${p.id},'${o.key}',this.value)">
             <option value=""${sel?'':' selected'} disabled>-- Choisir --</option>
             ${o.choices.map(c=>`<option value="${c.v}"${sel===c.v?' selected':''}>${c.v}${c.p>0?' (+'+c.p.toLocaleString('fr-FR')+' FCFA)':c.p<0?' ('+c.p.toLocaleString('fr-FR')+' FCFA)':''}</option>`).join('')}
           </select>`;
         }).join('')}
-        ${p.opts.some(o=>o.choices.length>1)?`<div class="opt-warn" id="optWarn"><i class="ti ti-alert-circle"></i><span>Veuillez sélectionner toutes les options avant de continuer.</span></div>`:''}
+        ${p.opts.some(o=>o.choices.length>1)?`<div class="opt-warn" id="optWarn"><i class="fas fa-circle-exclamation"></i><span>Veuillez sélectionner toutes les options avant de continuer.</span></div>`:''}
       </div>
       <div class="qrow">
-        <span class="qlbl"><i class="ti ti-stack" style="margin-right:4px;"></i>Quantité</span>
+        <span class="qlbl"><i class="fas fa-layer-group" style="margin-right:4px;"></i>Quantité</span>
         <div class="qctrl">
           <button class="qbtn" onclick="chQ(-1)" aria-label="Diminuer la quantité">−</button>
           <div class="qnum" id="qn">1</div>
@@ -629,8 +681,8 @@ function renderModal(){
         </div>
       </div>
       <div class="mbtns">
-        <button class="madd" onclick="addM()"><i class="ti ti-shopping-bag"></i> Ajouter au panier</button>
-        <button class="mbuy" onclick="buyNow()"><i class="ti ti-bolt"></i> Acheter maintenant</button>
+        <button class="madd" onclick="addM()"><i class="fas fa-bag-shopping"></i> Ajouter au panier</button>
+        <button class="mbuy" onclick="buyNow()"><i class="fas fa-bolt"></i> Acheter maintenant</button>
       </div>
       ${suggestHtml(p)}
     </div>`;
@@ -641,7 +693,7 @@ function suggestHtml(p){
   const picks=[...sameCat,...others].slice(0,3);
   if(!picks.length)return'';
   return `<div class="m-suggest">
-    <div class="m-suggest-title"><i class="ti ti-sparkles" style="color:var(--g);"></i>Vous aimerez aussi</div>
+    <div class="m-suggest-title"><i class="fas fa-wand-magic-sparkles" style="color:var(--g);"></i>Vous aimerez aussi</div>
     <div class="m-suggest-grid">
       ${picks.map(s=>`<div class="m-sug-card" onclick="om(${s.id})">
         <div class="m-sug-img"><img src="${s.imgs[0]}" alt="${s.name}" loading="lazy"></div>
@@ -765,7 +817,7 @@ function qAdd(id,btn){
   if(ex){ex.qty++;toast('Quantité mise à jour');}
   else{
     cart.push({...p,qty:1,unitPrice:p.price,opts:autoOpts,_key:key});
-    btn.innerHTML='<i class="ti ti-check"></i> Ajouté';btn.classList.add('done');
+    btn.innerHTML='<i class="fas fa-check"></i> Ajouté';btn.classList.add('done');
     toast('“'+p.name.substring(0,28)+'…” ajouté');
   }
   updCC();
@@ -774,8 +826,17 @@ function cmClose(e){
   if(e===null||e.target===document.getElementById('mov')){
     document.getElementById('mov').classList.remove('open');
     document.body.style.overflow='';
+    if(location.hash.startsWith('#produit-'))history.pushState({},'',location.pathname+location.search);
   }
 }
+window.addEventListener('popstate',e=>{
+  const m=location.hash.match(/^#produit-(\d+)/);
+  if(m){const id=Number(m[1]);if(PRODS.find(x=>x.id===id))om(id,true);}
+  else if(document.getElementById('mov').classList.contains('open')){
+    document.getElementById('mov').classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')cmClose(null);});
 function updCC(){
   const t=cart.reduce((s,i)=>s+i.qty,0);
@@ -785,7 +846,7 @@ function updCC(){
 function rCart(){
   const el=document.getElementById('cartEl');
   if(!cart.length){
-    el.innerHTML=`<div class="cempty"><i class="ti ti-shopping-bag"></i><p>Votre panier est vide.</p><button class="btn-g" onclick="sp('shop',null)">Voir la boutique</button></div>`;
+    el.innerHTML=`<div class="cempty"><i class="fas fa-bag-shopping"></i><p>Votre panier est vide.</p><button class="btn-g" onclick="sp('shop',null)">Voir la boutique</button></div>`;
     return;
   }
   const sub=cart.reduce((s,i)=>s+i.unitPrice*i.qty,0);
@@ -805,7 +866,7 @@ function rCart(){
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:8px;flex-shrink:0;">
         <div class="ci-total">${(it.unitPrice*it.qty).toLocaleString('fr-FR')} FCFA</div>
-        <button class="ci-del" onclick="rm(${idx})" aria-label="Retirer cet article"><i class="ti ti-trash"></i></button>
+        <button class="ci-del" onclick="rm(${idx})" aria-label="Retirer cet article"><i class="fas fa-trash"></i></button>
       </div>
     </div>`).join('')}</div>
     <div class="csumm">
@@ -813,7 +874,7 @@ function rCart(){
       <div class="srow"><span>Livraison</span><span style="color:var(--ws);">Selon zone — à l'étape suivante</span></div>
       <div class="srow"><span>Paiement</span><span style="color:var(--ws);">Selon zone — à l'étape suivante</span></div>
       <div class="stot"><span>Total</span><span>${sub.toLocaleString('fr-FR')} FCFA</span></div>
-      <button class="ckout" onclick="goCheckout()"><i class="ti ti-arrow-right"></i> Passer la commande</button>
+      <button class="ckout" onclick="goCheckout()"><i class="fas fa-arrow-right"></i> Passer la commande</button>
     </div>`;
 }
 function uQ(idx,d){
@@ -831,7 +892,7 @@ function renderCheckout(){
   const summEl=document.getElementById('coSumm');
   if(!orderItems.length){
     itemsEl.innerHTML='';
-    summEl.innerHTML=`<div class="cempty"><i class="ti ti-shopping-bag"></i><p>Aucun article sélectionné.</p><button class="btn-g" onclick="sp('shop',null)">Voir la boutique</button></div>`;
+    summEl.innerHTML=`<div class="cempty"><i class="fas fa-bag-shopping"></i><p>Aucun article sélectionné.</p><button class="btn-g" onclick="sp('shop',null)">Voir la boutique</button></div>`;
     return;
   }
   const sub=orderItems.reduce((s,i)=>s+i.unitPrice*i.qty,0);
@@ -933,7 +994,7 @@ function submitOrder(){
   +'</div>';
   const btn=document.getElementById('coSubBtn');
   const btnOrig=btn.innerHTML;
-  btn.disabled=true;btn.innerHTML='<i class="ti ti-loader"></i> Envoi en cours…';
+  btn.disabled=true;btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Envoi en cours…';
   emailjs.send('service_vrgrtyd','template_nwgxg2e',{
     subject:'Nouvelle commande de '+n,
     email_body:emailBody,
@@ -992,6 +1053,11 @@ function toast(msg){
   setTimeout(()=>t.classList.remove('show'),3000);
 }
 rProds('all');
+renderHomeProds();
+(function(){
+  const m=location.hash.match(/^#produit-(\d+)/);
+  if(m){const id=Number(m[1]);if(PRODS.find(x=>x.id===id))om(id,true);}
+})();
 </script>
 </body>
 </html>
