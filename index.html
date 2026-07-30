@@ -231,6 +231,11 @@ textarea.finp{resize:vertical;min-height:82px;}
 .fsub{width:100%;background:var(--g);color:var(--wh);border:none;padding:13px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;margin-top:4px;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
 .fsub:hover{background:var(--gl);}
 .toast{position:fixed;bottom:24px;right:24px;background:var(--bk3);border:var(--bdh);color:var(--g);padding:12px 22px;font-size:12px;font-weight:600;letter-spacing:1px;z-index:999;transform:translateY(80px);opacity:0;transition:all .35s;max-width:290px;}
+.live-visitors{position:fixed;top:100px;right:24px;background:var(--bk3);border:var(--bd);color:var(--wh);padding:10px 16px;font-size:11.5px;font-family:'Raleway',sans-serif;display:flex;align-items:center;gap:8px;z-index:550;box-shadow:0 4px 18px rgba(0,0,0,.08);transition:opacity .3s;}
+.live-visitors.lv-light{opacity:.3;}
+.lv-dot{width:8px;height:8px;border-radius:50%;background:#3EBD6B;flex-shrink:0;animation:lvPulse 1.6s infinite;}
+@keyframes lvPulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+@media(max-width:480px){.live-visitors{top:118px;right:10px;left:auto;padding:7px 10px;font-size:9.5px;max-width:150px;}}
 .toast.show{transform:translateY(0);opacity:1;}
 footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
 .flogo{font-family:'Playfair Display',serif;font-size:15px;color:var(--g);letter-spacing:2px;}
@@ -511,6 +516,7 @@ footer{padding:22px 40px;border-top:var(--bd);display:flex;align-items:center;ju
   </div>
 </div>
 <div class="toast" id="toast"></div>
+<div class="live-visitors" id="liveVisitors"><span class="lv-dot"></span><span id="lvCount">8</span>&nbsp;personnes consultent la boutique</div>
 
 <script>
 const PRODS=[
@@ -632,6 +638,7 @@ function om(id,skipHash){
   document.getElementById('mov').classList.add('open');
   document.getElementById('mov').scrollTop=0;
   document.body.style.overflow='hidden';
+  document.getElementById('liveVisitors')?.classList.add('lv-light');
   if(!skipHash){
     const slug=curP.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
     history.pushState({prod:id},'',location.pathname+location.search+'#produit-'+id+'-'+slug);
@@ -792,6 +799,7 @@ function addM(){
   else cart.push({...curP,qty:curQ,unitPrice:px,opts,_key:key});
   updCC();cmClose(null);
   toast('“'+curP.name.substring(0,28)+'…” ajouté au panier');
+  if(window.fbq)fbq('track','AddToCart',{content_name:curP.name,content_ids:[curP.id],content_type:'product',value:px*curQ,currency:'XOF'});
 }
 function buyNow(){
   if(!validateOpts())return;
@@ -801,6 +809,7 @@ function buyNow(){
   orderFromCart=false;
   cmClose(null);
   sp('checkout',null);
+  if(window.fbq)fbq('track','InitiateCheckout',{content_ids:[curP.id],content_type:'product',value:px*curQ,currency:'XOF',num_items:curQ});
 }
 function qAdd(id,btn){
   const p=PRODS.find(x=>x.id===id);
@@ -821,11 +830,13 @@ function qAdd(id,btn){
     toast('“'+p.name.substring(0,28)+'…” ajouté');
   }
   updCC();
+  if(window.fbq)fbq('track','AddToCart',{content_name:p.name,content_ids:[p.id],content_type:'product',value:p.price,currency:'XOF'});
 }
 function cmClose(e){
   if(e===null||e.target===document.getElementById('mov')){
     document.getElementById('mov').classList.remove('open');
     document.body.style.overflow='';
+    document.getElementById('liveVisitors')?.classList.remove('lv-light');
     if(location.hash.startsWith('#produit-'))history.pushState({},'',location.pathname+location.search);
   }
 }
@@ -835,6 +846,7 @@ window.addEventListener('popstate',e=>{
   else if(document.getElementById('mov').classList.contains('open')){
     document.getElementById('mov').classList.remove('open');
     document.body.style.overflow='';
+    document.getElementById('liveVisitors')?.classList.remove('lv-light');
   }
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape')cmClose(null);});
@@ -1014,6 +1026,7 @@ function submitOrder(){
     to_email:'NDIAW.DIOP459@GMAIL.COM',
     reply_to:'NDIAW.DIOP459@GMAIL.COM'
   }).then(()=>{
+    if(window.fbq)fbq('track','Purchase',{content_ids:orderItems.map(i=>i.id),content_type:'product',value:tot,currency:'XOF',num_items:orderItems.reduce((s,i)=>s+i.qty,0)});
     if(orderFromCart){cart=[];updCC();}
     orderItems=[];orderFromCart=false;
     document.getElementById('coForm').style.display='none';
@@ -1030,6 +1043,10 @@ function goCheckout(){
   orderItems=cart.map(i=>({...i}));
   orderFromCart=true;
   sp('checkout',null);
+  if(window.fbq){
+    const val=cart.reduce((s,i)=>s+i.unitPrice*i.qty,0);
+    fbq('track','InitiateCheckout',{content_ids:cart.map(i=>i.id),content_type:'product',value:val,currency:'XOF',num_items:cart.reduce((s,i)=>s+i.qty,0)});
+  }
 }
 function sendC(){
   const n=document.getElementById('fn').value.trim();
@@ -1057,6 +1074,14 @@ renderHomeProds();
 (function(){
   const m=location.hash.match(/^#produit-(\d+)/);
   if(m){const id=Number(m[1]);if(PRODS.find(x=>x.id===id))om(id,true);}
+})();
+(function(){
+  const el=document.getElementById('lvCount');
+  function tick(){
+    if(el)el.textContent=Math.floor(Math.random()*15)+1;
+    setTimeout(tick,Math.floor(Math.random()*(9000-4000+1))+4000);
+  }
+  tick();
 })();
 </script>
 </body>
